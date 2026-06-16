@@ -1,2 +1,1 @@
-# obsidian-i18n-resources
-obsidian插件汉化
+# AI翻译 + 一点点手动调整，有点粗糙，主打能用就行
