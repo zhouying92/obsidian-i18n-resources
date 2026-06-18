@@ -2,7 +2,7 @@
     "schemaVersion": 1,
     "metadata": {
         "plugin": "astro-composer",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "title": "Astro Composer",
         "description": "Astro Composer 简单汉化",
         "language": "zh-cn",
@@ -17,12 +17,6 @@
                     "name": "addOption",
                     "source": "Underscore prefix",
                     "target": "下划线前缀"
-                },
-                {
-                    "type": "CallExpression",
-                    "name": "addOption",
-                    "source": "property",
-                    "target": "属性"
                 },
                 {
                     "type": "CallExpression",
@@ -51,38 +45,14 @@
                 {
                     "type": "CallExpression",
                     "name": "addOption",
-                    "source": "folder",
-                    "target": "文件夹"
-                },
-                {
-                    "type": "CallExpression",
-                    "name": "addOption",
                     "source": "Folder-based (content-title/index.md)",
                     "target": "基于文件夹（content-title/index.md）"
                 },
                 {
                     "type": "CallExpression",
                     "name": "addOption",
-                    "source": "file",
-                    "target": "文件"
-                },
-                {
-                    "type": "CallExpression",
-                    "name": "addOption",
                     "source": "File-based (content-title.md)",
                     "target": "基于文件 (content-title.md)"
-                },
-                {
-                    "type": "CallExpression",
-                    "name": "createEl",
-                    "source": "input",
-                    "target": "输入"
-                },
-                {
-                    "type": "CallExpression",
-                    "name": "createEl",
-                    "source": "button",
-                    "target": "按钮"
                 },
                 {
                     "type": "CallExpression",
@@ -214,7 +184,7 @@
                     "type": "CallExpression",
                     "name": "setDesc",
                     "source": "Choose the default format for copied heading links. Obsidian format respects your Obsidian settings for wikilink vs Markdown preference. Astro link uses your link base path from above and converts the heading into kebab-case format as an anchor link",
-                    "target": "选择复制标题链接的默认格式。Obsidian 格式会遵循您在 Obsidian 中设置的维基链接或 Markdown 偏好。Astro 链接使用上述链接基础路径，并将标题转换为短横线格式作为锚点链接。"
+                    "target": "选择复制标题链接的默认格式。Obsidian 格式会遵循您在 Obsidian 中设置的 wikilink 或 Markdown 偏好。Astro 链接使用上述链接基础路径，并将标题转换为短横线格式作为锚点链接。"
                 },
                 {
                     "type": "CallExpression",
@@ -515,12 +485,6 @@
                     "name": "setName",
                     "source": "Command",
                     "target": "命令"
-                },
-                {
-                    "type": "CallExpression",
-                    "name": "setName",
-                    "source": "Icon",
-                    "target": "图标"
                 },
                 {
                     "type": "CallExpression",
@@ -892,7 +856,7 @@
                     "type": "ObjectProperty",
                     "name": "desc",
                     "source": "Choose the default format for copied heading links. Obsidian format respects your Obsidian settings for wikilink vs Markdown preference. Astro link uses your link base path from above and converts the heading into kebab-case format as an anchor link",
-                    "target": "选择复制标题链接的默认格式。Obsidian 格式会尊重您在 Obsidian 中关于维基链接与 Markdown 链接的偏好设置。Astro 链接则使用上述链接基础路径，并将标题转换为短横线分隔格式作为锚点链接。"
+                    "target": "选择复制标题链接的默认格式。Obsidian 格式会尊重您在 Obsidian 中关于 wikilink 与 Markdown 链接的偏好设置。Astro 链接则使用上述链接基础路径，并将标题转换为短横线分隔格式作为锚点链接。"
                 },
                 {
                     "type": "ObjectProperty",
@@ -1203,12 +1167,6 @@
                 {
                     "type": "ObjectProperty",
                     "name": "name",
-                    "source": "Icon",
-                    "target": "图标"
-                },
-                {
-                    "type": "ObjectProperty",
-                    "name": "name",
                     "source": "Posts",
                     "target": "文章"
                 },
@@ -1349,6 +1307,18 @@
                     "name": "text",
                     "source": "Migrate with renamed types",
                     "target": "使用重命名类型进行迁移"
+                },
+                {
+                    "type": "CallExpression",
+                    "name": "addOption",
+                    "source": "Property-based",
+                    "target": "基于属性"
+                },
+                {
+                    "type": "CallExpression",
+                    "name": "setName",
+                    "source": "Icon",
+                    "target": "图标"
                 }
             ],
             "regex": [
@@ -1805,14 +1775,6 @@
                     "target": "text: \"新内容\""
                 },
                 {
-                    "source": "text: `Create new ${typeName} content`",
-                    "target": "text: `创建新的 ${typeName} 内容`"
-                },
-                {
-                    "source": "text: `Enter a title for your new ${typeName} content:`",
-                    "target": "text: `为新的 ${typeName} 内容输入标题：`"
-                },
-                {
                     "source": "text: \"Cancel\"",
                     "target": "text: \"取消\""
                 },
@@ -2035,6 +1997,22 @@
                 {
                     "source": " this folder. More specific patterns will take priority.",
                     "target": "此文件夹。更具体的模式将优先考虑。"
+                },
+                {
+                    "source": "Enter a title for your new ${typeName} content:",
+                    "target": "为新的 ${typeName} 内容输入标题："
+                },
+                {
+                    "source": "Create new ${typeName} content",
+                    "target": "创建新的 ${typeName} 内容"
+                },
+                {
+                    "source": "\"Create\"",
+                    "target": "\"创建\""
+                },
+                {
+                    "source": "Create new content type: ${contentType.name}",
+                    "target": "创建新的内容类型: ${contentType.name}"
                 }
             ]
         }
